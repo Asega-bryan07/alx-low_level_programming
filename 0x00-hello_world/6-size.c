@@ -8,17 +8,17 @@
  */
 int main(void)
 {
-        int a = sizeof(char);
-	int b = sizeof(int);
-	int c = sizeof(int);
-	int d = sizeof(int);
-	int e = sizeof(float);
+        int a;
+	long int b;
+	long long int c;
+	char d;
+	float e;
 
-	printf("Size of a char: %d byte(s)\n", a);
-	printf("Size of an int: %d byte(s)\n", b);
-	printf("Size of an int: %d byte(s)\n", c);
-	printf("Size of a long long int: %d byte(s)\n", d);
-	printf("Size of a float: %d byte(s)\n", e);
+	printf("Size of a char: %lu byte(s)\n", (unsigned long)sizeof(d));
+	printf("Size of a long int: %lu byte(s)\n", (unsigned long)sizeof(b));
+	printf("Size of a long long int: %lu byte(s)\n", (unsigned long)sizeof(c));
+	printfprintf("Size of a float: %lu byte(s)\n", (unsigned long)sizeof(e));
+	printf("Size of an int: %lu byte(s)\n", (unsigned long)sizeof(a));
 	return (0);
 }
 
