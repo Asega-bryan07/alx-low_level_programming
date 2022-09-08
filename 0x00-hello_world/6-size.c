@@ -8,7 +8,6 @@
  */
 int main(void)
 {
-	
         int a = sizeof(char);
 	int b = sizeof(int);
 	int c = sizeof(int);
