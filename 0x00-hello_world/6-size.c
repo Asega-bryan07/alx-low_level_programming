@@ -1,6 +1,6 @@
 # include <stdio.h>
 
-/**
+/*
  * main - Entry block
  *
  * Return: Always goood
@@ -8,18 +8,16 @@
  */
 int main(void)
 {
-        int a;
-	long int b;
-	long long int c;
-	char d;
-	float e;
-
-	printf("Size of a char: %lu byte(s)\n", (unsigned long)sizeof(d));
-	printf("Size of a long int: %lu byte(s)\n", (unsigned long)sizeof(b));
-	printf("Size of a long long int: %lu byte(s)\n", (unsigned long)sizeof(c));
-	printfprintf("Size of a float: %lu byte(s)\n", (unsigned long)sizeof(e));
-	printf("Size of an int: %lu byte(s)\n", (unsigned long)sizeof(a));
+        int = sizeof(a);
+	int = sizeof(b);
+	int = sizeof(c);
+	char = sizeof(d);
+	float = sizeof(e);
+	
+	printf("Size of a char: %d byte(s)\n", d);
+	printf("Size of a long int: %d byte(s)\n", b);
+	printf("Size of a long long int: %d byte(s)\n", a);
+	printf("Size of a float: %d byte(s)\n", e);
+	printf("Size of an int: %d byte(s)\n", c);
 	return (0);
 }
-
-
