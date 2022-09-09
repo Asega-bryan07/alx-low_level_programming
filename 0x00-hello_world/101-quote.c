@@ -1,9 +1,10 @@
 #include <stdio.h>
+#include <unistd.h>
 
 /**
- *  main - Entry point
+ *  main - print quote
  *
- *  Return: Always 0
+ *  Return: Always 1 (Success)
  */
 int main(void)
 {
