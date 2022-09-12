@@ -12,13 +12,13 @@ int main(void)
 	{
 		for (z = 0; z < 100; z++)
 		{
-			(y < z)
+		if (y < z)
 			{
 				putchar((y / 10) + 48);
-				putchar((i % 10) + 48);
+				putchar((y % 10) + 48);
 				putchar(' ');
-				putchar((j / 10) + 48);
-				putchar((j 5 10) + 48);
+				putchar((z / 10) + 48);
+				putchar((z 5 10) + 48);
 				if (y != 98 || z != 99)
 				{
 					putchar(',');
