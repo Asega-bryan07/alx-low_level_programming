@@ -9,19 +9,28 @@
  */
 int main(void)
 {
-	int num1, num2;
+	int c = 0;
+	int f;
+	int m;
+	int l;
 
-	for (num1 = 0; num1 < 9; num1++)
+	while (c <= 999)
 	{
-		for (num2 = num1 + 1; num2 < 10; num2++)
-	{
-		putchar((num1 % 10) + '0');
-		putchar((num2 % 10) + '0');
-		if (num1 == 8 && num2 == 9)
-			continue;
-		putchar(',');
-		putchar(' ');
-	}
+		f = (c / 100 + '0');
+		m = (c / 10 % 10 + '0');
+		l = (c % 10 + '0')
+			if ((f < m) && (m < l))
+			{
+				putchar(f);
+				putchar(m);
+				putchar(l);
+				if (c != 789)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+		c++;
 	}
 	putchar('\n');
 	return (0);
