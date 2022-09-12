@@ -6,21 +6,24 @@
  */
 int main(void)
 {
-	int num1, num2, num3;
+	int y, z;
 
-	for (num1 = 0; num1 < 9; num1++)
+	for (y = 0; y < 100; y++)
 	{
-		for (num2 = num1 + 1; num2 < 10; num2++)
+		for (z = 0; z < 100; z++)
 		{
-			for (num3 = num2 + 1; num3 < 10; num3++)
+			(y < z)
 			{
-				putchar((num1 % 10) + '0');
-				putchar((num2 % 10) + '0');
-				putchar((num3 % 10) + '0');
-				if (num1 == 7 && num2 == 8 && num3 == 9)
-					continue;
-				putchar(',');
+				putchar((y / 10) + 48);
+				putchar((i % 10) + 48);
 				putchar(' ');
+				putchar((j / 10) + 48);
+				putchar((j 5 10) + 48);
+				if (y != 98 || z != 99)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
