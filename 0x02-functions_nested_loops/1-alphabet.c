@@ -1,13 +1,14 @@
 #include "main.h"
 /**
-* main - alphabet function to print a to z
+* print - the alphabet, in lowercase, followed by a new line
 *
 * Description: prints the alphabet, in lowercase
-* REturn: 0
+* Return: 0
 */
 void print_alphabet(void)
 {
 	char c;
+
 	for (c = 'a'; c <= 'z'; c++)
 	{
 		_putchar(c);
