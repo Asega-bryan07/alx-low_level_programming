@@ -7,18 +7,18 @@
  */
 int main(void)
 {
-	unsiggned long m = 1, n = 2, tmp, mx = 100000000, o = 0, p = 0, tmpo = 0;
-	short int i = 1, initial0s;
+	unsigned long m = 1, n = 2, tmp, mx = 100000000, o = 0, p = 0, tmpo = 0;
+	short int i = 1, initialos;
 
 	while (i <= 98)
 	{
 		if (o > 0)
 			printf("%lu", o);
 		initial0s = numLength(mx) - 1 - numLength(m);
-		while (o > 0 && initial0s > 0)
+		while (o > 0 && initialos > 0)
 		{
 			printf("%i", 0);
-			initial0s--;
+			initialos--;
 		}
 		printf("%lu", m);
 		tmp = (m + n) % mx;
