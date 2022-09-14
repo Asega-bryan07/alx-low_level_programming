@@ -5,7 +5,7 @@
  * @n: parameter
  * Return: 0 successful
  */
-void print_times_table(int n)
+void times_table(int n)
 {
 	int digit, mult, result;
 
