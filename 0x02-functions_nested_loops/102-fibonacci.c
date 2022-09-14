@@ -8,8 +8,8 @@
 int main(void)
 {
 	int c;
-
 	unsigned long x1 = 0, x2 = 1, x3;
+
 	for (c = 0; c < 50; c++)
 	{
 		x3 = x1 + x2;
