@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
- * main - prints count of multiples of
- * 3 or 5 below 1024
+ * main - printing 3 or 5 below 1024
+ *
  *Description: printing multiples
- * return: 0 success
+ * Return: 0 success
  */
 int main(void)
 {
