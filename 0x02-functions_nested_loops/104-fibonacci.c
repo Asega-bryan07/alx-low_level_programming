@@ -14,7 +14,7 @@ int main(void)
 	{
 		if (o > 0)
 			printf("%lu", o);
-		initialos = numLength(mx) - 1 - numLength(m);
+		initialos = numLength - 1 - numLength(m);
 		while (o > 0 && initialos > 0)
 		{
 			printf("%i", 0);
