@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * jack bauer - prints every minute of the day
+ * jack_bauer - prints every minute of the day
  * Descroption: function prints from 00:00 to 23:59 hrs
  * Return: the time from 00:00 to 23:59
  */
