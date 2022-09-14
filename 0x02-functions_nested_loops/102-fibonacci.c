@@ -1,7 +1,8 @@
 #include <stdio.h>
 /**
- * fibonacci - returns suit numbers
- *
+ * main - printing fibonacci which returns suit numbers
+ * 
+ * Description: Fibonacci
  * Return: 0
  */
 int main(void)
