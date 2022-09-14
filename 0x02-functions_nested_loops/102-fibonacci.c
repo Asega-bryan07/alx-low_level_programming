@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - printing fibonacci which returns suit numbers
- * 
+ *
  * Description: Fibonacci
  * Return: 0
  */
