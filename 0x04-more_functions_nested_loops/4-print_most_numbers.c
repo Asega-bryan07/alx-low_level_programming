@@ -16,7 +16,10 @@ void print_most_numbers(void)
 		{
 			continue;
 		}
+		else
+		{
 		_putchar(n);
+		}
 	}
-	_putchar(10);
+	_putchar('\n');
 }
