@@ -3,12 +3,16 @@
 
 /**
  * main - header file for prototypes
+ *
+ * _isupper - alphabet in uppercase
+ *
  * void prototypes (void)
- * int prototypes (int)
+ * @c: the cahracter to print
+ * * int prototypes (int)
  */
+
 int _isupper(int c);
 void print_number(int n);
-int _isupper(int c);
 int _isdigit(int c);
 int mul(int a, int b);
 void print_numbers(void);
@@ -20,4 +24,5 @@ void print_square(int size);
 void print_triangle(int size);
 int _putchar(char c);
 
+create _putchar.c
 #endif /* MAIN_H */
