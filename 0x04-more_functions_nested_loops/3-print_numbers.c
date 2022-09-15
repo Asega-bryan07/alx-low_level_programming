@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -6,13 +5,8 @@
  *
  * Return: returns 0
  */
-int print_numbers(void)
+int main(void)
 {
-	int a;
-
-	for (a = 48; a < 57; a++)
-	{
-		putchar(a);
-	}
-	putchar('\n');
+	print_numbers();
+	return (0);
 }
