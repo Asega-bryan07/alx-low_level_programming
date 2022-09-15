@@ -6,8 +6,13 @@
  * print_numbers - function prints from 0 to 9
  * Return: returns 0
  */
-int main(void)
+void print_number(void)
 {
-	print_numbers();
-	return (0);
+	int i;
+	
+	for (i = 0; i < 10; i++)
+	{
+		putchar(i + '0');
+	}
+	putchar('\n');
 }
