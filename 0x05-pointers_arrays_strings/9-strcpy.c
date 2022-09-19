@@ -8,7 +8,7 @@
  * Description: copy paste a string
  * Return: destination
  */
-char *_strcpy(char *dest, *src)
+char *_strcpy(char *dest, char *src)
 {
 	int inc = 0;
 
