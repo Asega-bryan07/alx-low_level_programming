@@ -3,16 +3,16 @@
 #include "main.h"
 
 /**
- * print_rev - prints a string in reverse
+ * print_rev - prints a string in a reverse order
  *
- * @b: string to reverse
+ * @s: string to reverse
  * Return:0
  */
-void print_rev(char b)
+void print_rev(char *s)
 {
-	int len = strlen(b);
+	int len = strlen(s);
 
 	while (len--)
-		putchar(*(b + len));
+		putchar(*(s + len));
 	putchar(10);
 }
