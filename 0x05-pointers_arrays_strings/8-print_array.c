@@ -5,7 +5,7 @@
  *
  * @a: array
  * @n: elements number
- * REturn: 0
+ * Return: 0
  */
 void print_array(int *a, int n)
 {
@@ -13,13 +13,10 @@ void print_array(int *a, int n)
 
 	for (inc = 0; inc < n; inc++)
 	{
-		if (inc != n; inc++)
-		{
-			if (inc != n - 1)
-				printf("%d, ", a[inc]);
-			else
-				printf("%d", a[inc]);
-		}
-		putchar(0);
+		if (inc != n - 1)
+		printf("%d, ", a[inc]);
+		else
+		printf("%d", a[inc]);
 	}
+		putchar(0);
 }
