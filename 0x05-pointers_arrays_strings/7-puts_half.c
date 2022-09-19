@@ -2,7 +2,7 @@
 /**
  * puts_half - prints half of a string, followed by a new line
  *
- * @s: parameter
+ * @str: string to print
  * Return: 0
  */
 void puts_half(char *str)
@@ -13,4 +13,3 @@ void puts_half(char *str)
 		putchar(*(str + i));
 	putchar(10);
 }
-
