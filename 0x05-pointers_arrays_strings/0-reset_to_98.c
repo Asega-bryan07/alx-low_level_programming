@@ -2,8 +2,8 @@
 
 /**
  * reset_to_98 -> a function to update yhe reference of a pointer
- * @n: pointer parameter
- *Return: 0
+ * @n: parameter
+ *Return: nothing
  */
 void reset_to_98(int *n)
 {
