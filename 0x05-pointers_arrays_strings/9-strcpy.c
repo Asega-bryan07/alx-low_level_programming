@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * strcpy - copy and pasting a string
+ * _strcpy - copy and pasting a string
  *
  * @dest: destination
  * @src: source
  * Description: copy paste a string
  * Return: destination
  */
-char *strcpy(char *dest, *src)
+char *_strcpy(char *dest, *src)
 {
 	int inc = 0;
 
@@ -18,6 +18,5 @@ char *strcpy(char *dest, *src)
 		inc++;
 	}
 	*(dest + inc) = '\0';
-	inc++;
 	return (dest);
 }
