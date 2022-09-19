@@ -18,5 +18,6 @@ char *strcpy(char *dest, *src)
 		inc++;
 	}
 	*(dest + inc) = '\0';
+	inc++;
 	return (dest);
 }
