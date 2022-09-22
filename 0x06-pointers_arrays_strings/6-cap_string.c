@@ -26,7 +26,7 @@ char *cap_string(char *str)
 
 	while (str[++index])
 	{
-		while (!(str[undex] >= '0') && (str[index] <= 'z'))
+		while (!(str[undex] >= 'a') && (str[index] <= 'z'))
 			index++;
 		if (str[index - 1] == ' ' ||
 				str[index - 1] == '\t' ||
