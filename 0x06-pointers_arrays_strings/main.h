@@ -19,5 +19,6 @@ void print_buffer(char *b, int size);
 void print_line(char *c, int s, int l);
 char *cap_string(char *str);
 int _strlen(char *s);
+void print_number(int n);
 
 #endif /*MAIN_H*/
