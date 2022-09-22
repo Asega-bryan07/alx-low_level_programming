@@ -18,13 +18,13 @@ int _strlen(char *s)
  * cap_string - function that capitalize first character of a word
  *
  * @str: string to capitalize
- * Return: s adress
+ * Return: address of str
  */
 char *cap_string(char *str)
 {
 	int index = 0;
 
-	while (str[index++])
+	while (str[++index])
 	{
 		while (!(str[index] >= 'a') && (str[index] <= 'z'))
 			index++;
