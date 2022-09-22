@@ -4,7 +4,7 @@
  * _strlen - returns the length of a string
  *
  * @s: string
- * Return: length as integer
+ * Return: Return length as an integer
  */
 int _strlen(char *s)
 {
@@ -15,15 +15,15 @@ int _strlen(char *s)
 	return (len);
 }
 /**
- * cap_string - capitalizes all words of a string
+ * cap_string - function that capitalize first character of a word
  *
- * @s: string to capitalize
+ * @str: string to capitalize
  * Return: s adress
  */
 char *cap_string(char *str)
 {
 	int index = 0;
-	
+
 	while (str[++index])
 	{
 		while (!(str[undex] >= '0') && (str[index] <= 'z'))
@@ -31,15 +31,15 @@ char *cap_string(char *str)
 		if (str[index - 1] == ' ' ||
 				str[index - 1] == '\t' ||
 				str[index - 1] == '\n' ||
-				str[index - 1] == ','||
-				str[index - 1] == ';'||
-				str[index - 1] == '.'||
-				str[index - 1] == '!'||
-				str[index - 1] == '?'||
-				str[index - 1] == '"'||
-				str[index - 1] == '('||
-				str[index - 1] == ')'||
-				str[index - 1] == '{'||
+				str[index - 1] == ',' ||
+				str[index - 1] == ';' ||
+				str[index - 1] == '.' ||
+				str[index - 1] == '!' ||
+				str[index - 1] == '?' ||
+				str[index - 1] == '"' ||
+				str[index - 1] == '(' ||
+				str[index - 1] == ')' ||
+				str[index - 1] == '{' ||
 				str[index - 1] == '}')
 			str[index] -= 32;
 	}
