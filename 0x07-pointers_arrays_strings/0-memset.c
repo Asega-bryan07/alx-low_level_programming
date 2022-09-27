@@ -7,7 +7,7 @@
  * @n: the number of bytes to be filled
  * Return: A pointer to the filled memory block
  */
-char _memset(char *s, char b, unsigned int n)
+char *_memset(char *s, char b, unsigned int n)
 {
 	while (n)
 	{
