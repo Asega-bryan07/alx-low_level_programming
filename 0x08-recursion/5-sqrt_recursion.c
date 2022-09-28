@@ -3,31 +3,30 @@
 /**
  * _sqrt_recursion - returns the natural square root of a number
  *
- * @n: number to be squared
- * Return: the square root of n
+ * @num: number to be squared
+ * @root: square root of a number
+ * Return: the square root of num
  */
 int _sqrt_recursion(int n)
 {
-	int x = 0;
+	int root = 0;
 
-	if (n < 0)
+	if (num < 0)
 		return (-1);
-	if (n == 1)
+	if (num == 1)
 		return (1);
-	return (find_sqrt(n, x));
+	return (find_sqrt(num, root));
 }
 /**
  *find_sqrt - returns the square root of a number
  *
- * @n: test number
- * @x: squared number
- * Return: the square root of n
+ * Return: the square root of num
  */
-int find_sqrt(int n, int x)
+int find_sqrt(int num, int root)
 {
-	if ((x * x / 2) == n)
-		return (x);
-	if (x == n / 2)
+	if ((root * root / 2) == num)
+		return (root);
+	if (root == num / 2)
 		return (-1);
-	return (find_sqrt(n, x + 1));
+	return (find_sqrt(num, root + 1));
 }
