@@ -10,7 +10,7 @@
  * @argv: array of a command listed
  * Return: 1
  */
-int main(int argc, char *argv[])
+int main(int argc, char argv[])
 {
 	int result, num, i, j, k;
 
