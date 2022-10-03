@@ -3,7 +3,6 @@
 /**
  * _strdup - returns a pointer to a newly allocated space
  *
- * @string: string to be copied
  * @str: string to be copied
  * Return: NULL incase of error, pointer to allocated space
  */
