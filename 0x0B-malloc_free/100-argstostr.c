@@ -30,7 +30,7 @@ char *argstostr(int ac, char **av)
 	int k = 0, i = ac, j, sum = 0, temp = 0;
 
 	if (ac == 0 || av == NULL)
-		return (null);
+		return (NULL);
 	while (ac--)
 		sum += (len(av[ac]) + 1);
 	new_string = (char *) malloc(sum + 1);
@@ -39,7 +39,8 @@ char *argstostr(int ac, char **av)
 		while (k < i)
 		{
 			for (j = 0; av[k][j] != '\0'; j++)
-				new_string[temp + j] = '\n';
+				new_string[j + temp] = av[k][j];
+			new_string[j + temp] = '\n';
 			temp += (j + 1);
 			k++;
 		}
