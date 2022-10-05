@@ -1,4 +1,5 @@
 #include "stdio.h"
+#include <stdlib.h>
 
 /**
  * len - function that returns length of str
