@@ -8,20 +8,21 @@
  */
 int wrdcnt(char *s)
 {
-	int i, n = 0;
+	int flag, c, w;
 
-	for (i = 0; s[i]; i++)
+	flag = 0;
+	w = 0;
+	for (c = 0; s[c] != '\0'; c++)
 	{
-		if (s[i] == ' ')
+		if (s[c] == ' ')
+			flag = 0;
+		else if (flag == 0)
 		{
-			if (s[i + 1] != ' ' && s[i + 1] != '\0')
-				n++;
+			flag = 1;
+			w++;
 		}
-		else if (i == 0)
-			n++;
 	}
-	n++;
-	return (n);
+	return (w);
 }
 /**
  * strtow - splits a string into words
