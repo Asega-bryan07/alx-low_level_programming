@@ -25,51 +25,49 @@ int wrdcnt(char *s)
 	return (w);
 }
 /**
- * strtow - splits a string into words
+ * **strtow - splits a string into words
  *
  * @str: string to be split
  * Return: pointer to the array of split words
  */
 char **strtow(char *str)
 {
-	int i, j, k, l, n = 0, wc = 0;
-	char **w;
+	char **matrix, *tmp;
+	int i, k = 0, len = 0, words, c = 0, start, end;
 
-	if (str == NULL || *str == '\0')
+	while (*(str + len))
+		len++;
+	words = wrdcnt(str);
+	if (words == 0)
 		return (NULL);
-	n = wrdcnt(str);
-	if (n == 1)
+
+	matrix = (char **) malloc(sizeof(char *) * (words + 1));
+	if (matrix == NULL)
 		return (NULL);
-	w = (char **)malloc(n * sizeof(char *));
-	if (w == NULL)
-		return (NULL);
-	w[n - 1] = NULL;
-	i = 0;
-	while (str[i])
+
+	for (i = 0; i <= len; i++)
 	{
-		if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
+		if (str[i] == ' ' || str[i] == '\0')
 		{
-			for (j = 1; str[i + j] != ' ' && str[i + j]; j++)
-				;
-			j++;
-			w[wc] = (char *)malloc(j * sizeof(char));
-			j--;
-			if (w[wc] == NULL)
+			if (c)
 			{
-				for (k = 0; k < wc; k++)
-					free(w[k]);
-				free(w[n - 1]);
-				free(w);
-				return (NULL);
+				end = i;
+				tmp = (char *) malloc(sizeof(char) * (c + 1));
+				if (tmp == NULL)
+					return (NULL);
+				while (start < end)
+					*tmp++ = str[start++];
+				*tmp = '\0';
+				matrix[k] = tmp - c;
+				k++;
+				c = 0;
 			}
-			for (l = 0; l < j; l++)
-				w[wc][l] = str[i + l];
-			w[w][l] = '\0';
-			wc++;
-			i += j;
 		}
-		else
-			i++;
+		else if (c++ == 0)
+			start = i;
 	}
-	return (w);
+
+	matrix[k] = NULL;
+
+	return (matrix);
 }
