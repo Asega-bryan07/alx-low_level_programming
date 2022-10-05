@@ -1,12 +1,12 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * num_words - counts the number of words in a string
+ * wrdcnt - counts the number of words in a string
  *
- * @str: string to be counted
+ * @s: string to be counted
  * Return: length of a string
  */
-int num_words(char *str)
+int wrdcnt(char *s)
 {
 	int i, n = 0;
 
