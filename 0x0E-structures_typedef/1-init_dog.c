@@ -1,4 +1,7 @@
-
+#include "dog.h"
+#include "1-main.c"
+#include "main.h"
+#include "_putchar.c"
 #include <stdlib.h>
 
 /**
