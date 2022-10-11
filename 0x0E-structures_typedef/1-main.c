@@ -2,7 +2,7 @@
 #include "dog.h"
 
 /**
-* main - check codes from Holberton school
+* main - checks codes from Holberton school
 * Return: 0, Success
 */
 int main(void)
