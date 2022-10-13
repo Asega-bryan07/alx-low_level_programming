@@ -1,4 +1,7 @@
 #include "3-calc.h"
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * main - performs simple operational tasks
