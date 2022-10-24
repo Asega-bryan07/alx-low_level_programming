@@ -6,10 +6,12 @@ fmt: db "%s", 10, 0
 	extern printf
 	global main
 main:
-	mov esi, msg
-	mov edi, msg
-	mov eax, 0
+	mov rdi, msg
+	mov rsi, msg
+	mov rax, 0
 	call printf
 
-	mov eax, 0
+	pop rbp
+
+	mov rax, 0
 	ret
