@@ -3,13 +3,13 @@ msg: db "Hello, Holberton", 0
 fmt: db "%s", 10, 0
 
 	SECTION .text
-	extern main
+	extern printf
 	global main
 main:
 	mov esi, msg
 	mov edi, msg
 	mov eax, 0
-	call main
+	call printf
 
 	mov eax, 0
 	ret
