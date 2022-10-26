@@ -12,7 +12,9 @@ listint_t *find_listint_loop(listint_t *head)
 	listint_t *node1, *node2;
 
 	if (head == NULL || head->next == NULL)
-		node1 = head->next;
+		return (NULL);
+
+	node1 = head->next;
 	node2 = (head->next)->next;
 	while (node2)
 	{
