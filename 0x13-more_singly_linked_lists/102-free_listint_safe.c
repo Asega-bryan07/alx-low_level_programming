@@ -6,10 +6,10 @@
  * @head: head of the list
  * Return: no return
  */
-void free_listp9(listp_t **head)
+void free_listp9(listint_t **head)
 {
-	listp_t *temp;
-	listp_t *curr;
+	listint_t *temp;
+	listint_t *curr;
 
 	if (head != NULL)
 	{
@@ -32,18 +32,18 @@ void free_listp9(listp_t **head)
 size_t free_listint_safe(listint_t **h)
 {
 	size_t nnodes = 0;
-	listp_t *hptr, *new, *add;
+	listint_t *hptr, *new, *add;
 	listint_t *curr;
 
 	hptr = NULL;
 	while (*h != NULL)
 	{
-		new = malloc(sizeof(listp_t));
+		new = malloc(sizeof(listint_t));
 
 		if (new == NULL)
 			exit(98);
 
-		new->p = (void *)*h;
+		new->ptr = (void *)*h;
 		new->next = hptr;
 		hptr = new;
 
@@ -52,10 +52,10 @@ size_t free_listint_safe(listint_t **h)
 		while (add->next != NULL)
 		{
 			add = add->next;
-			if (*h == add->p)
+			if (*h == add->ptr)
 			{
 				*h = NULL;
-				free_listp9(&hptr);
+				free_listint(&hptr);
 				return (nnodes);
 			}
 		}
@@ -63,7 +63,7 @@ size_t free_listint_safe(listint_t **h)
 		curr = *h;
 		*h = (*h)->next;
 		free(curr);
-		nnodes++
+		nnodes++;
 	}
 
 	*h = NULL;
