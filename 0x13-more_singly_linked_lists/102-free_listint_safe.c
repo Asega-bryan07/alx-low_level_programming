@@ -31,7 +31,7 @@ listint_t **_listp9(listint_t **list, size_t size, listint_t *new)
 
 /**
  * free_listint_safe - a function that frees a linked list
- * @h: head of the list 
+ * @h: head of the list
  *
  * Return: size of the freed list
  */
