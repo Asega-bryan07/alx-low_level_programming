@@ -1,75 +1,65 @@
 #include "lists.h"
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 
 /**
- * free_listp9 - frees a linked list
+ * _listp9 - reallocates memory for an array of pointers
+ * to the nodes in a linked list
  *
- * @head: head of the list
- * Return: no return
+ * @list: the old list to append
+ * @size: size of the new list
+ * @new: new node to add to the list
+ * Return: pointer to new list
  */
-void free_listp9(listint_t **head)
+listint_t **_listp9(listint_t **list, size_t size, listint_t *new)
 {
-	listint_t *temp;
-	listint_t *curr;
+	listint_t **newlist;
+	size_t i;
 
-	if (head != NULL)
+	newlist = malloc(size * sizeof(listint_t *));
+	if (newlist == NULL)
 	{
-		curr = *head;
-		while ((temp = curr) != NULL)
-		{
-			curr = curr->next;
-			free(temp);
-		}
-		*head = NULL;
+		free(list);
+		exit(98);
 	}
+	for (i = 0; i < size - 1; i++)
+		newlist[i] = list[i];
+	newlist[i] = new;
+	free(list);
+	return (newlist);
 }
 
 /**
  * free_listint_safe - a function that frees a linked list
- * @h: head of the list
- * 
+ * @h: head of the list 
+ *
  * Return: size of the freed list
  */
 size_t free_listint_safe(listint_t **h)
 {
-	size_t nnodes = 0;
-	listint_t *hptr, *new, *add;
-	listint_t *curr;
+	size_t i, num = 0;
+	listint_t **list = NULL;
+	listint_t *next;
 
-	hptr = NULL;
+	if (h == NULL || *h == NULL)
+		return (num);
 	while (*h != NULL)
 	{
-		new = malloc(sizeof(listint_t));
-
-		if (new == NULL)
-			exit(98);
-
-		((*p).new) = (void *)*h;
-		new->next = hptr;
-		hptr = new;
-
-		add = hptr;
-
-		while (add->next != NULL)
+		for (i = 0; i < num; i++)
 		{
-			add = add->next;
-			if (*h != (*p).new)
+			if (*h == list[i])
 			{
 				*h = NULL;
-				free_listp9(&hptr);
-				return (nnodes);
+				free(list);
+				return (num);
 			}
 		}
-
-		curr = *h;
-		*h = (*h)->next;
-		free(curr);
-		nnodes++;
+		num++;
+		list = _listp9(list, num, *h);
+		next = (*h)->next;
+		free(*h);
+		*h = next;
 	}
-
-	*h = NULL;
-	free_listp9(&hptr);
-	return (nnodes);
+	free(list);
+	return (num);
 }
