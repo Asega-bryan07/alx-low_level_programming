@@ -1,6 +1,7 @@
 #include "lists.h"
+#include <stdio.h>
 #include <string.h>
-
+#include <stdlib.h>
 
 /**
  * free_listp9 - frees a linked list
@@ -28,7 +29,7 @@ void free_listp9(listint_t **head)
 /**
  * free_listint_safe - a function that frees a linked list
  * @h: head of the list
- *
+ * 
  * Return: size of the freed list
  */
 size_t free_listint_safe(listint_t **h)
@@ -45,7 +46,7 @@ size_t free_listint_safe(listint_t **h)
 		if (new == NULL)
 			exit(98);
 
-		new->n = (void *)*h;
+		((*p).new) = (void *)*h;
 		new->next = hptr;
 		hptr = new;
 
@@ -54,7 +55,7 @@ size_t free_listint_safe(listint_t **h)
 		while (add->next != NULL)
 		{
 			add = add->next;
-			if (*h == add->n)
+			if (*h != (*p).new)
 			{
 				*h = NULL;
 				free_listp9(&hptr);
