@@ -1,4 +1,6 @@
 #include "lists.h"
+#include <string.h>
+
 
 /**
  * free_listp9 - frees a linked list
@@ -43,7 +45,7 @@ size_t free_listint_safe(listint_t **h)
 		if (new == NULL)
 			exit(98);
 
-		new->ptr = (void *)*h;
+		new->n = (void *)*h;
 		new->next = hptr;
 		hptr = new;
 
@@ -52,10 +54,10 @@ size_t free_listint_safe(listint_t **h)
 		while (add->next != NULL)
 		{
 			add = add->next;
-			if (*h == add->ptr)
+			if (*h == add->n)
 			{
 				*h = NULL;
-				free_listint(&hptr);
+				free_listp9(&hptr);
 				return (nnodes);
 			}
 		}
