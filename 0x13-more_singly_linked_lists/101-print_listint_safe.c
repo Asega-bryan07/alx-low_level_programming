@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include  <stdio.h>
 /**
- * _l - reallocates memory for an array of pointers to the
+ * _r - reallocates memory for an array of pointers to the
  * nodes of a linked list
  *
  * @list: the old list to append
@@ -10,7 +10,7 @@
  * @new: new node to add to the list
  * Return: pointer to new list
  */
-const listint_t **_l(const listint_t **list, size_t size, const listint_t *new)
+const listint_t **_r(const listint_t **list, size_t size, const listint_t *new)
 {
 	const listint_t **newlist;
 	size_t i;
@@ -51,7 +51,7 @@ size_t print_listint_safe(const listint_t *head)
 			}
 		}
 		num++;
-		list = real(list, num, head);
+		list = _r(list, num, head);
 		printf("[%p] %d\n", (void *)head, head->n);
 		head = head->next;
 	}

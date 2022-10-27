@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * _listp9 - reallocates memory for an array of pointers
+ * _r2 - reallocates memory for an array of pointers
  * to the nodes in a linked list
  *
  * @list: the old list to append
@@ -11,7 +11,7 @@
  * @new: new node to add to the list
  * Return: pointer to new list
  */
-listint_t **_listp9(listint_t **list, size_t size, listint_t *new)
+listint_t **_r2(listint_t **list, size_t size, listint_t *new)
 {
 	listint_t **newlist;
 	size_t i;
@@ -55,7 +55,7 @@ size_t free_listint_safe(listint_t **h)
 			}
 		}
 		num++;
-		list = _listp9(list, num, *h);
+		list = _r2(list, num, *h);
 		next = (*h)->next;
 		free(*h);
 		*h = next;
