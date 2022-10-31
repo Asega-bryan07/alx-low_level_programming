@@ -2,12 +2,12 @@
 #include "main.h"
 
 /**
- * check_valid_string - checks if a string has only 0's and 1's
+ * binary_to_uint - function that converts a binary number to an unsigned int
  * @b: string to be checked
  *
- * Return 1 if string is valid, 0 otherwise
+ * Return: the converted number, or 0 otherwise
  */
-int check_valid_string(const char *b)
+unsigned int binary_to_uint(const char *b)
 {
 	if (b == NULL)
 		return (0);
