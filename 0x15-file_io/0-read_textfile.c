@@ -10,7 +10,7 @@
  * @letters: number of letters to be printed
  * Return: number of letters to be printed
  */
-ssize_t read_textfile(const char *filename, size_t letters);
+ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
 	ssize_t lenr, lenw;
@@ -24,7 +24,7 @@ ssize_t read_textfile(const char *filename, size_t letters);
 	buffer = malloc(sizeof(char) * letters);
 	if (buffer == NULL)
 	{
-		clode(fd);
+		close(fd);
 		return (0);
 	}
 	lenr = read(fd, buffer, letters);
