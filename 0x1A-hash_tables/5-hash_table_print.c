@@ -2,7 +2,7 @@
 
 /**
  * hash_table_print - prints a hash table
- * 
+ *
  * @ht: pointer to the hash table to print
  * Description: key/value pairs are printed in the order they
  * appear in the array of a hash table

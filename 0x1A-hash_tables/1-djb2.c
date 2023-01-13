@@ -2,7 +2,7 @@
 
 /**
  * hash_djb2 - Hash function implementing the djb2 algorithm
- * 
+ *
  * @str: the string to hash
  * Return: the claculated hash
  */

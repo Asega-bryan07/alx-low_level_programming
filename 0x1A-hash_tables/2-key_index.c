@@ -3,7 +3,7 @@
 /**
  * key_index - get the index at which the key or value pair should
  * be stored in array of hash table
- * 
+ *
  * @key: the key to get the index of
  * @size: the size of the array of the hash table
  * Return: the index of the key
