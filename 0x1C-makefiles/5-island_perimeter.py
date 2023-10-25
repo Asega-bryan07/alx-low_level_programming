@@ -34,7 +34,7 @@ def num_water_neighbors(grid, i, j):
         if j >= len(grid[i]) - 1 or not grid[i][j + 1]:
             num += 1
 
-        if j >= len(grid[i]) - 1 or not grid[i + 1][j]:
+        if i >= len(grid[i]) - 1 or not grid[i + 1][j]:
             num += 1
         return num
 
@@ -42,7 +42,7 @@ def island_perimeter(grid):
     """Returns The parameter of the island grid"""
         perimeter = 0
         for i in range(len(grid)):
-            for j in range (len(grid[i])):
+            for j in range(len(grid[i])):
                 if grid[i][j]:
                     perimeter += num_water_neighbors(grid, i, j)
         return perimeter
