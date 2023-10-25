@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # Technical interview preparation:
 #
 # You are not allowed to google anything
@@ -18,7 +20,6 @@
 # You are not allowed to import any module
 # Module and function must be documented\
 
-#!/usr/bin/python3
 """ module that calculates perimeter of an island in a grid"""
 
 def num_water_neighbors(grid, i, j):
