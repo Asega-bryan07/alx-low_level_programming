@@ -24,29 +24,29 @@
 
 def num_water_neighbors(grid, i, j):
     """return number of water neighborsa cell that has a grid"""
-        num = 0
+    num = 0
 
-        if i <= 0 or not grid[i - 1][j]:
+    if i <= 0 or not grid[i - 1][j]:
             num +=1
 
-        if j <= 0 or not grid[i][i - 1]:
+    if j <= 0 or not grid[i][i - 1]:
             num +=1
 
-        if j >= len(grid[i]) - 1 or not grid[i][j + 1]:
+    if j >= len(grid[i]) - 1 or not grid[i][j + 1]:
             num += 1
 
-        if i >= len(grid[i]) - 1 or not grid[i + 1][j]:
+    if i >= len(grid[i]) - 1 or not grid[i + 1][j]:
             num += 1
-        return num
+    return num
 
 def island_perimeter(grid):
     """Returns The parameter of the island grid"""
-        perimeter = 0
-        for i in range(len(grid)):
-            for j in range(len(grid[i])):
-                if grid[i][j]:
-                    perimeter += num_water_neighbors(grid, i, j)
-        return perimeter
+    perimeter = 0
+    for i in range(len(grid)):
+        for j in range(len(grid[i])):
+            if grid[i][j]:
+                perimeter += num_water_neighbors(grid, i, j)
+    return perimeter
 
 
 
